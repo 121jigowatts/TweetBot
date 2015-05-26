@@ -10,6 +10,14 @@ namespace TweetBot
     {
         static void Main(string[] args)
         {
+            var APIKey = "";
+            var APISecret = "";
+            var AccessToken = "";
+            var AccessTokenSecret = "";
+            var tokens = CoreTweet.Tokens.Create(APIKey, APISecret, AccessToken, AccessTokenSecret);
+
+            var text = "";
+            tokens.Statuses.Update(new { status = text });
         }
     }
 }
